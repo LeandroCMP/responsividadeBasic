@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsividade</title>
+
+    <style>
+    
+        body{
+            display: grid;
+            grid-template-areas: "s1 s2 s3 s4";
+            grid-template-rows: 20vh;
+        }
+
+        #um{
+            grid-area: s1;
+            background: green;
+        }
+
+        #dois{
+            grid-area: s2;
+            background: blue;
+        }
+
+        #tres{
+            grid-area: s3;
+            background: red;
+        }
+
+        #quatro{
+            grid-area: s4;
+            background: brown;
+        }
+
+        @media (max-width: 1200px){
+            body{
+                grid-template-areas: "s1 s2" "s3 s4";
+                grid-template-rows: 20vh 20vh;
+                grid-gap: 5vh;
+            }
+
+            #um{
+                background: yellow;
+            }
+
+            #dois{
+                background: purple;
+            }
+        }
+
+        @media (max-width: 1000px){
+            body{
+                grid-template-areas: "s1" "s2" "s3" "s4";
+                grid-template-rows: 20vh 20vh 20vh 20vh;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="um">Div1</div>
+    <div id="dois">Div2</div>
+    <div id="tres">Div1</div>
+    <div id="quatro">Div2</div>
+</body>
+</html>
